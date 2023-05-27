@@ -21,6 +21,7 @@ If all these conditions are met, we can plant a flower in the current plot and d
 
 Now, let's walk through the flowerbed = [1,0,0,0,1] and n = 2 example:
 
+
 For i = 0:
 flowerbed[i] == 0 is false because flowerbed[0] is 1, so we skip this plot.
 For i = 1:

@@ -29,19 +29,31 @@ Explanation: We cannot do any operations on the string so the length remains the
 
  class Solution {
     public int minLength(String s) {
-        int end = 2;
-        int begin = 0;
-
-        while (end <= s.length()) {
-            if ((s.substring(begin, end).equals("AB") || s.substring(begin, end).equals("CD"))) {
-                s = s.substring(0, begin) + s.substring(end);
-                begin = 0;
-                end = 2;
-            } else {
-                begin++;
-                end++;
-            }
+    
+    Stack<Character> newstack = new Stack <>();
+    for(int i = 0; i< s.length(); i++)
+    {
+        if(newstack.size() == 0)
+        {
+            newstack.push(s.charAt(i));
         }
-        return s.length();
+
+        else if(newstack.peek() == 'A' && s.charAt(i) == 'B')
+        {
+            newstack.pop();
+        }
+        else if(newstack.peek() == 'C' && s.charAt(i) == 'D')
+        {
+            newstack.pop();
+        }
+        else
+        {
+            newstack.push(s.charAt(i));
+        }
+    }
+
+    return newstack.size();
+    
+    
     }
 }

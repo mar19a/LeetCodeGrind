@@ -63,6 +63,7 @@ nums is sorted in non-decreasing order.
             }
         }
 
+
         // The number of distinct elements is the final position + 1
         return position + 1;
     }
@@ -76,10 +77,11 @@ public class twentysix {
         int k1 = solution.removeDuplicates(nums1);
         System.out.println(k1); // Output: 2
         for(int i=0; i<k1; i++) {
-            System.out.print(nums1[i] + " "); // Output: 1 2
+            System.out.print(nums1[i] + "  "); // Output: 1 2
         }
         System.out.println();
     
+
         int[] nums2 = {0,0,1,1,1,2,2,3,3,4};
         int k2 = solution.removeDuplicates(nums2);
         System.out.println(k2); // Output: 5

@@ -14,6 +14,7 @@ Example 2:
 
 Input: nums = [5], k = 1
 Output: 5.00000 */
+
 class Solution {
     public double findMaxAverage(int[] nums, int k) {
 

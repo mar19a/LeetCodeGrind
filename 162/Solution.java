@@ -7,7 +7,6 @@ You may imagine that nums[-1] = nums[n] = -∞. In other words, an element is al
 
 You must write an algorithm that runs in O(log n) time.
 
- 
 
 Example 1:
 
